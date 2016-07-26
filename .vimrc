@@ -1,4 +1,4 @@
-" this are some vim-latex settings
+" This are some vim-latex settings
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
 filetype plugin on
 
@@ -30,3 +30,11 @@ colorscheme one
 
 " Initializing Pathogen runtimepath
 execute pathogen#infect()
+
+" Installing powerline for better status
+"  on Fedora sudo dnf install vim-plugin-powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+set t_Co=256
