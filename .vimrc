@@ -75,6 +75,7 @@ vnoremap > >gv
 
 " Line numbers and length
 set number
+set relativenumber
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
@@ -102,4 +103,6 @@ let g:ycm_filetype_blacklist={
 " Fast check spelling last word
 nnoremap <leader>sp :normal! mm[s1z='m<cr>
 
+" Fast window split and jump on split 
+nnoremap <leader>w <C-w>v<C-w>l
 
