@@ -33,7 +33,7 @@ set spell spelllang=de,en
 set background=dark " for the dark version
 " set background=light " for the light version
 colorscheme one
-
+"colorscheme solarized
 
 " Initializing Pathogen runtimepath
 execute pathogen#infect()
@@ -92,5 +92,14 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" Turn of YCM for some files e,g. tex files
+let g:ycm_filetype_blacklist={
+    \ 'tex' : 1,
+    \ 'text' : 1
+    \}
+
+" Fast check spelling last word
+nnoremap <leader>sp :normal! mm[s1z='m<cr>
 
 
