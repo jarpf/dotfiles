@@ -47,10 +47,27 @@ python del powerline_setup
 set laststatus=2
 set t_Co=256
 
-
 " Rebind <Leader> key
 let mapleader=","
 
+" clipboard paste copy
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>Y "*y
+noremap <Leader>P "*p
+
+" write quit "
+noremap <Leader>q <esc>:wq<CR>
+
+" write document
+noremap <Leader>w <esc>:w<CR>
+
+" jump to mark
+noremap ' `
+noremap ` '
+
+" make new tab"
+noremap <Leader>t <esc>:tabnew<CR>
 
 " Tab switching
 map <Leader>n <esc>:tabprevious<CR>
@@ -104,5 +121,5 @@ let g:ycm_filetype_blacklist={
 nnoremap <leader>sp :normal! mm[s1z='m<cr>
 
 " Fast window split and jump on split 
-nnoremap <leader>w <C-w>v<C-w>l
+"nnoremap <leader>w <C-w>v<C-w>l
 
